@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PosixSharedMemory",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"handle",
+		"array",
+		"size"
+	],
+	"name" : "PosixSharedMemory",
+	"type" : "normal"
+}
