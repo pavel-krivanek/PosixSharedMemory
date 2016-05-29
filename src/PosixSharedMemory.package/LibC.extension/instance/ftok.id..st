@@ -9,6 +9,6 @@ ftok: path id: id
 	
 	| result |
 	
-	result := self ffiCall: #(int ftok(char * path, int id)).
+	result := self privFtok: path id: id.
 	(result = -1) ifTrue: [ self error ].
 	^ result
