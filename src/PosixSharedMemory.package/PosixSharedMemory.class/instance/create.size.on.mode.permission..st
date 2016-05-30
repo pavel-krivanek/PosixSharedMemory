@@ -1,7 +1,7 @@
 instance creation
 create: aBoolean size: anInteger on: aFileReference mode: mode permission: permissions 
 
-	| lib fid id flag | 
+	| lib fid flag | 
 
 	lib := LibC uniqueInstance.
 	
@@ -11,7 +11,7 @@ create: aBoolean size: anInteger on: aFileReference mode: mode permission: permi
 		ifFalse: [ permissions ].
 
 	fid := lib ftok: aFileReference fullName id: mode.
-	id := lib shmget: fid size: anInteger flag: flag.
-	handle := lib shmat: id shmaddr: 0 shmflg: 0.
+	shmid := lib shmget: fid size: anInteger flag: flag.
+	handle := lib shmat: shmid shmaddr: 0 shmflg: 0.
 
 	array := FFITypeArray fromHandle: handle getHandle type: #uchar size: anInteger.
