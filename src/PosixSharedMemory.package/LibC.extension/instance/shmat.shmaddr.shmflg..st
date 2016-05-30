@@ -12,6 +12,6 @@ If shmaddr is NULL, the system chooses a suitable (unused) address at which to a
 	| result |
 	
 	result := self privShmat: shmid shmaddr: shmaddr shmflg: shmflg.
-	result = -1 ifTrue: [ self error ].
+	result = -1 ifTrue: [ self riseLastError ].
 	^ result
 	

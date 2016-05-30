@@ -10,5 +10,5 @@ ftok: path id: id
 	| result |
 	
 	result := self privFtok: path id: id.
-	(result = -1) ifTrue: [ self error ].
+	(result = -1) ifTrue: [ self riseLastError ].
 	^ result

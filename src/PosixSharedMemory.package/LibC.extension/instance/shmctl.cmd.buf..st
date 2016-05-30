@@ -9,5 +9,5 @@ shmctl: shmid cmd: cmd buf: buf
 	[ 
 		result := self privShmctl: shmid cmd: cmd buf: buf.
 	] ensure: [ buffer free ].
-	result = -1 ifTrue: [ self error ].
+	result = -1 ifTrue: [ self riseLastError ].
 	^ result

@@ -14,5 +14,5 @@ used with IPC_CREAT to ensure failure if the segment already exists.
 
 	| result |
 	result := self privShmget: key size: size flag: shmflg.
-	result = -1 ifTrue: [ self error ].
+	result = -1 ifTrue: [ self riseLastError ].
 	^ result

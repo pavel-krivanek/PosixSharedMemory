@@ -5,5 +5,5 @@ shmdt: shmaddr
 
 	| result |
 	result := self privShmdt: shmaddr.
-	result = -1 ifTrue: [ self error ].
+	result = -1 ifTrue: [ self riseLastError ].
 	^ result
