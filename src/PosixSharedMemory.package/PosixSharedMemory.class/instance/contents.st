@@ -1,4 +1,4 @@
 accessing
 contents
 
-	^ array copy asByteArray.
+	^ self copyFrom: 1 to: size
