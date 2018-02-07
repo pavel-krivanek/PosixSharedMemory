@@ -1,8 +1,9 @@
 accessing
 at: index write: anArray
 
-	| byteArray |
-	byteArray := anArray asByteArray.	
-	byteArray withIndexDo: [ :val :i |
-		array at: index+i-1 put: val ].
-	^ byteArray
+	| aByteArray source |
+	
+	aByteArray := anArray asByteArray pinInMemory; yourself.
+	source := FFITypeArray fromHandle: aByteArray.
+	LibC memCopy: source getHandle to: (array getHandle + (index - 1)) size: anArray size.
+	^ aByteArray
