@@ -1,4 +1,4 @@
 instance creation
 unlink
 
-	^ LibPThread uniqueInstance privSemUnlink: id.
+	^ LibPThread uniqueInstance privSemUnlink: name.

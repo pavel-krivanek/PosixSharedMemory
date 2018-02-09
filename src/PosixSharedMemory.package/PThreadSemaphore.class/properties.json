@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"id"
+		"id",
+		"name"
 	],
 	"name" : "PThreadSemaphore",
 	"type" : "normal"
