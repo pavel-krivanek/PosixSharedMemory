@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "PavelKrivanek 2/9/2018 19:28",
+	"commentStamp" : "PavelKrivanek 2/9/2018 20:19",
 	"super" : "FFILibrary",
 	"category" : "PosixSharedMemory",
 	"classinstvars" : [ ],
