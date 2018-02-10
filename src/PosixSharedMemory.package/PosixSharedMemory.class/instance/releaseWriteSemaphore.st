@@ -1,4 +1,4 @@
 release
 releaseWriteSemaphore
 
-	writeSemaphore unlink.
+	writeMutex unlink.

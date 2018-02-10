@@ -11,9 +11,9 @@ create: aBoolean size: anInteger on: aFileReference mode: mode permission: permi
 		ifFalse: [ permissions ].
 		
 	path := aFileReference fullName.
-	semaphoreName := path, '-writeSemaphore'.
-	writeSemaphore := aBoolean 
-		ifTrue: [ PThreadSemaphore newNamed: semaphoreName value: 1 ]
+	semaphoreName := path, '-writeMutex'.
+	writeMutex := aBoolean 
+		ifTrue: [ PThreadSemaphore newForMutualExclusionNamed: semaphoreName ]
 		ifFalse: [ PThreadSemaphore existingNamed: semaphoreName ].
 
 	fid := lib ftok: path id: mode.

@@ -1,4 +1,4 @@
 release
 detachWriteSemaphore
 
-	writeSemaphore close.
+	writeMutex close.

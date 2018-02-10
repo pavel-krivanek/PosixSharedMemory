@@ -10,8 +10,8 @@
 		"shmid",
 		"array",
 		"size",
-		"writeSemaphore",
-		"path"
+		"path",
+		"writeMutex"
 	],
 	"name" : "PosixSharedMemory",
 	"type" : "normal"
