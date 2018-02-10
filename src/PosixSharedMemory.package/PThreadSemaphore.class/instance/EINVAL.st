@@ -1,0 +1,4 @@
+constants
+EINVAL 
+
+	^ 22

@@ -1,4 +1,4 @@
-instance creation
+operations
 open: aName value: anInteger
 
 	name := aName.

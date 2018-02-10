@@ -1,4 +1,4 @@
-instance creation
+operations
 close
 
 	^ LibPThread uniqueInstance privSemClose: id.

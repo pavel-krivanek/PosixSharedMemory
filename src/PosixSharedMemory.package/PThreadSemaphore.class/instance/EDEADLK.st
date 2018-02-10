@@ -1,0 +1,4 @@
+constants
+EDEADLK
+
+	^ 35

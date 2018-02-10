@@ -1,4 +1,4 @@
-instance creation
+operations
 join: name
 
 	id := LibPThread uniqueInstance privSemOpen: name oflag: (LibPThread uniqueInstance O_CREAT).

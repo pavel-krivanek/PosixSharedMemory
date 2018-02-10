@@ -1,0 +1,4 @@
+constants
+EINTR 
+	
+	^ 4

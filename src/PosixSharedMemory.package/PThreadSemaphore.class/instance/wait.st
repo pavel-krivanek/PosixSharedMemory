@@ -1,4 +1,4 @@
-instance creation
+operations
 wait
 
 	^ LibPThread uniqueInstance privSemWait: id.

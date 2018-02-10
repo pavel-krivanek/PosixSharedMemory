@@ -1,4 +1,4 @@
-instance creation
+operations
 unlink
 
 	^ LibPThread uniqueInstance privSemUnlink: name.

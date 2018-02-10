@@ -1,4 +1,4 @@
-instance creation
+operations
 signal
 
 	^ LibPThread uniqueInstance privSemPost: id.
