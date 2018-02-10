@@ -1,4 +1,4 @@
 private
-rivArray
+privArray
 
 	^ array

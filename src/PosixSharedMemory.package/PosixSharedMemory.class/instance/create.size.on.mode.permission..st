@@ -1,7 +1,7 @@
 instance creation
 create: aBoolean size: anInteger on: aFileReference mode: mode permission: permissions 
 
-	| lib fid flag | 
+	| lib fid flag semaphoreName | 
 
 	lib := LibC uniqueInstance.
 	
@@ -9,8 +9,14 @@ create: aBoolean size: anInteger on: aFileReference mode: mode permission: permi
 	flag := aBoolean 
 		ifTrue: [ self createMask bitOr: permissions ]
 		ifFalse: [ permissions ].
+		
+	path := aFileReference fullName.
+	semaphoreName := path, '-writeSemaphore'.
+	writeSemaphore := aBoolean 
+		ifTrue: [ PThreadSemaphore newNamed: semaphoreName value: 1 ]
+		ifFalse: [ PThreadSemaphore existingNamed: semaphoreName ].
 
-	fid := lib ftok: aFileReference fullName id: mode.
+	fid := lib ftok: path id: mode.
 	shmid := lib shmget: fid size: anInteger flag: flag.
 	handle := lib shmat: shmid shmaddr: 0 shmflg: 0.
 

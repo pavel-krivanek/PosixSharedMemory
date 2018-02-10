@@ -1,0 +1,4 @@
+release
+detachWriteSemaphore
+
+	writeSemaphore close.

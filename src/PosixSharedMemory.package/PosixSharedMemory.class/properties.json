@@ -9,7 +9,9 @@
 		"handle",
 		"shmid",
 		"array",
-		"size"
+		"size",
+		"writeSemaphore",
+		"path"
 	],
 	"name" : "PosixSharedMemory",
 	"type" : "normal"

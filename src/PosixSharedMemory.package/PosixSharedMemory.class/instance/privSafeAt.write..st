@@ -1,5 +1,5 @@
-accessing
-safeAt: index write: anArray
+private
+privSafeAt: index write: anArray
 
 	| byteArray |
 	byteArray := anArray asByteArray.	
