@@ -8,7 +8,7 @@ tryWait
 	^ (returnCode = -1)
 		ifTrue: [ 
 			errno := LibC uniqueInstance privErrno.
-			^ (errno = self EAGAIN)
+			^ (errno = LibPThread uniqueInstance EAGAIN)
 				ifTrue: [ false ]
 				ifFalse: [ self error: (ZnUTF8Encoder new decodeBytes: (self privStrerror: errno) asByteArray) ] ]
 		ifFalse: [ true ]
